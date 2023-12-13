@@ -5,24 +5,23 @@ using TMPro;
 
 public class MainUI : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        SetActiveRecursively(gameObject, true);
-    }
+    [SerializeField] private TextMeshProUGUI _jobText;
+    [SerializeField] private TextMeshProUGUI _userName;
+    [SerializeField] private TextMeshProUGUI _levelValue;
+    [SerializeField] private TextMeshProUGUI _ExpValue;
+    [SerializeField] GameObject _ExpCurrent;
 
-    private void OnDisable()
-    {
-        SetActiveRecursively(gameObject, false);
-    }
+    private int currentExp;
+    private int maxExp;
 
-    public void SetActiveRecursively(GameObject obj, bool active)
+    // Start is called before the first frame update
+    void Start()
     {
-        obj.SetActive(active);
-
-        // Recursively call for all child objects of the current object
-        foreach (Transform child in obj.transform)
-        {
-            SetActiveRecursively(child.gameObject, active);
-        }
+        _jobText.text = GameManager.Player.Job.ToString();
+        _userName.text = GameManager.Player.Name.ToString();
+        _levelValue.text = GameManager.Player.Level.ToString();
+        currentExp = GameManager.Player.Exp;
+        maxExp = GameManager.Player.MaxExp;
+        _ExpValue.text = $"{currentExp} / {maxExp}");
     }
 }
