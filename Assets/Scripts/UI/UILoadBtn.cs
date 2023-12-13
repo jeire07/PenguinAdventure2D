@@ -28,7 +28,20 @@ public class UILoadBtn : MonoBehaviour
 
     public void LoadUI()
     {
-        GameObject uiGameObject = GameObject.FindGameObjectWithTag(_textValue);
+        // find parent GameObject
+        Transform myTransform = gameObject.transform;
+        Transform GrandParentTransform = (myTransform.parent).parent;
+        Debug.Log("Text Value: " + GrandParentTransform.name);
+
+        // enable GameObject clicked by user
+        Debug.Log("Text Value: " + _textValue);
+        GameObject uiGameObject = GrandParentTransform.Find(_textValue).gameObject;
+
+        Debug.Log("Text Value: " + uiGameObject.name);
         uiGameObject.SetActive(true);
+
+        // disable parent GameObject for disable current UI
+        GameObject parentObject = (myTransform.parent).gameObject;
+        parentObject.SetActive(false);
     }
 }

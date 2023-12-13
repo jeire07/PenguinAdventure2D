@@ -1,28 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class MarketUI : MonoBehaviour
 {
-    private void OnEnable()
+    // Start is called before the first frame update
+    void Start()
     {
-        SetActiveRecursively(gameObject, true);
+
     }
 
-    private void OnDisable()
+    // Update is called once per frame
+    void Update()
     {
-        SetActiveRecursively(gameObject, false);
+
     }
 
-    public void SetActiveRecursively(GameObject obj, bool active)
+    public void LoadMarketItems()
     {
-        obj.SetActive(active);
 
-        // Recursively call for all child objects of the current object
-        foreach (Transform child in obj.transform)
-        {
-            SetActiveRecursively(child.gameObject, active);
-        }
     }
 }

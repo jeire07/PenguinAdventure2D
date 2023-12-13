@@ -6,9 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public List<Item> ItemList { get; private set; }
+    public static List<Item> ItemList { get; private set; }
 
-    public static PlayerStat Player;
+    public static PlayerStat Player { get; private set; }
 
     void Awake()
     {
