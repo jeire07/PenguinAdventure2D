@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2df4586cb2a94c64181e38bf157fa5b4, type: 3}
-  m_Name: StatData_Penguin
+  m_Name: UserData_Penguin
   m_EditorClassIdentifier: 
+  UserID: Penguin
   Species: "\uD3AD\uADC4"
   Name: "\uAE38 \uC783\uC740 \uD3AD\uADC4"
   Description: "\uD3AD\uADC4 \uC528\uB294 \uBC25\uC744 \uAD6C\uD558\uAE30 \uC704\uD574
@@ -30,3 +31,4 @@ MonoBehaviour:
   Mp: 50
   CritPercent: 10
   Speed: 5
+  Image: {fileID: 21300000, guid: 901639f1dddd7b04aa3c943786d274d5, type: 3}
