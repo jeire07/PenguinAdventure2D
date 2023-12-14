@@ -20,9 +20,13 @@ public class UserDataManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void GetExp()
     {
-        
+
+    }
+
+    public void LevelUp()
+    {
+
     }
 }

@@ -1,16 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class MainUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _jobText;
-    [SerializeField] private TextMeshProUGUI _userName;
-    [SerializeField] private TextMeshProUGUI _levelValue;
-    [SerializeField] private TextMeshProUGUI _ExpValue;
-    [SerializeField] GameObject _ExpCurrent;
-
+    [SerializeField] private TMP_Text _jobText;
+    [SerializeField] private TMP_Text _userName;
+    [SerializeField] private TMP_Text _levelValue;
+    [SerializeField] private TMP_Text _expValue;
+    [SerializeField] GameObject _expCurrent;
+    [SerializeField] private TMP_Text _description;
+    [SerializeField] private TMP_Text _meat;
+    
     private int _currentExp;
     private int _maxExp;
     private float _expBarLength;
@@ -18,26 +18,36 @@ public class MainUI : MonoBehaviour
     //Start is called before the first frame update
     void Start()
     {
+        // Job, UserName
+        _jobText.text = UserDataManager.Instance.userData.Species.ToString();
+        _userName.text = UserDataManager.Instance.userData.Name.ToString();
+
+        // Description
+        _description.text = UserDataManager.Instance.userData.Description;
+
+        GetChangedInfo();
+    }
+
+    private void OnEnable()
+    {
+        GetChangedInfo();
+    }
+
+    private void GetChangedInfo()
+    {
+        // Level
+        _levelValue.text = UserDataManager.Instance.userData.Level.ToString();
+
+        // Exp value
         _currentExp = UserDataManager.Instance.userData.Exp;
-        _maxExp = GameManager.Player.MaxExp;
+        _maxExp = UserDataManager.Instance.userData.MaxExp;
+        _expValue.text = $"{_currentExp} / {_maxExp}";
 
+        // Exp Progress Bar
+        _expBarLength = _currentExp / _maxExp;
+        _expCurrent.transform.localScale = new Vector3(_expBarLength, 1.0f, 1.0f);
 
-        _jobText.text = GameManager.Player.Job.ToString();
-        _userName.text = GameManager.Player.Name.ToString();
-        _levelValue.text = GameManager.Player.Level.ToString();
-        _ExpValue.text = $"{_currentExp} / {_maxExp}";
-        _ExpCurrent.transform.localScale = new Vector3(_expBarLength, 1.0f, 1.0f);
-
-    public string Nickname;
-    public int Level;
-    public int Exp;
-    public string Description;
-    public int Coin;
-
-    public int Atk;
-    public int Def;
-    public int Hp;
-    public int Mp;
-    public float critRate;
-}
+        // Meat (= substitute of gold)
+        _meat.text = UserDataManager.Instance.userData.Meat.ToString();
+    }
 }
