@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MainUI : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject _expCurrent;
     [SerializeField] private TMP_Text _description;
     [SerializeField] private TMP_Text _meat;
-    
+    //[SerializeField] private Image _CharacterImage;
+
     private int _currentExp;
     private int _maxExp;
     private float _expBarLength;
@@ -49,5 +51,8 @@ public class MainUI : MonoBehaviour
 
         // Meat (= substitute of gold)
         _meat.text = UserDataManager.Instance.userData.Meat.ToString();
+
+        // character image
+        //_CharacterImage = UserDataManager.Instance.userData.Image;
     }
 }

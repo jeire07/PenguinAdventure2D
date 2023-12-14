@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class StatusUI : MonoBehaviour
 {
