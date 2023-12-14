@@ -4,9 +4,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public static ItemList Items { get; private set; }
-
-    public static PlayerStat Player { get; private set; }
+    //public static ItemList Items { get; private set; }
 
     void Awake()
     {
