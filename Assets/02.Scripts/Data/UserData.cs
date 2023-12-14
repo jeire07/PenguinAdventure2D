@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "StatData", menuName = "Stat", order = 0)]
+[CreateAssetMenu(fileName = "UserData", menuName = "Data/UserData", order = 2)]
 public class UserData : ScriptableObject
 {
     public string UserID;
@@ -22,4 +22,6 @@ public class UserData : ScriptableObject
     public int Mp;
     public int CritPercent;
     public int Speed;
+
+    public Sprite Image;
 }
