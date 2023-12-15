@@ -2041,7 +2041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputData: {fileID: 0}
   PopUpEquipUI: {fileID: 972692546}
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 402789820}
   EquipMark: {fileID: 975907234}
 --- !u!1 &402789818
 GameObject:
@@ -3129,7 +3129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputData: {fileID: 0}
   PopUpEquipUI: {fileID: 972692546}
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 810565235}
   EquipMark: {fileID: 955728656}
 --- !u!1 &519420028
 GameObject:
@@ -4007,7 +4007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputData: {fileID: 0}
   PopUpEquipUI: {fileID: 972692546}
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 261534257}
   EquipMark: {fileID: 154616403}
 --- !u!1 &706378205
 GameObject:
@@ -4488,7 +4488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputData: {fileID: 0}
   PopUpEquipUI: {fileID: 972692546}
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 999794206}
   EquipMark: {fileID: 618531794}
 --- !u!1 &765712284
 GameObject:
@@ -7597,7 +7597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputData: {fileID: 0}
   PopUpEquipUI: {fileID: 972692546}
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 1737125467}
   EquipMark: {fileID: 1572317194}
 --- !u!1 &1298151266
 GameObject:
@@ -7925,7 +7925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputData: {fileID: 0}
   PopUpEquipUI: {fileID: 972692546}
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 1722756908}
   EquipMark: {fileID: 1463623690}
 --- !u!1 &1345716258
 GameObject:
@@ -12439,7 +12439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputData: {fileID: 0}
   PopUpEquipUI: {fileID: 972692546}
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 1087129855}
   EquipMark: {fileID: 920768878}
 --- !u!1 &1980644148
 GameObject:
@@ -12957,7 +12957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputData: {fileID: 0}
   PopUpEquipUI: {fileID: 972692546}
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 496521832}
   EquipMark: {fileID: 1795152914}
 --- !u!1 &2091167229
 GameObject:
@@ -12993,7 +12993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputData: {fileID: 0}
   PopUpEquipUI: {fileID: 972692546}
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 679469300}
   EquipMark: {fileID: 743650495}
 --- !u!224 &2091167231
 RectTransform:
